@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>OverlayAI</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- TOP DRAG BAR -->
+  <div class="drag-bar">
+    <span class="title">OverlayAI</span>
+    <button id="closeBtn">✕</button>
+  </div>
+
+  <div class="safe-zone"></div>
+
+  <!-- MAIN CONTENT -->
+  <div class="overlay glass">
+    <textarea
+      id="question"
+      placeholder="Type interview question here…"
+    ></textarea>
+
+    <button id="askBtn">Ask</button>
+
+
+    <div class="answer-wrap">
+      <pre id="answer">Answer will appear here…</pre>
+    </div>
+   
+  </div>
+
+    <div class="resize-corner"></div>
+ 
+
+
+  <script src="renderer.js"></script>
+</body>
+</html>

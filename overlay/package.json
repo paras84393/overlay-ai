@@ -1,0 +1,17 @@
+{
+  "name": "overlay",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@electron/rebuild": "^4.0.3",
+    "electron": "^40.0.0",
+    "electron-rebuild": "^3.2.9"
+  }
+}

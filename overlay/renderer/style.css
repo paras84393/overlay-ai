@@ -1,0 +1,168 @@
+/* ===============================
+   GLOBAL
+================================ */
+* {
+  box-sizing: border-box;
+}
+
+/* ===============================
+   BODY (TRANSPARENT WINDOW)
+================================ */
+body {
+  margin: 0;
+  height: 100vh;
+  background: rgba(20, 20, 20, 0.25); /* window transparency */
+  font-family: "Segoe UI", Consolas, monospace;
+  color: #f1f1f1;
+
+  -webkit-app-region: no-drag;
+  overflow: hidden;
+}
+
+/* ===============================
+   DRAG BAR
+================================ */
+.drag-bar {
+  -webkit-app-region: drag;
+  height: 42px;
+  background: rgba(15, 15, 15, 0.6);
+  backdrop-filter: blur(12px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 14px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  cursor: move;
+}
+
+.drag-bar * {
+  -webkit-app-region: no-drag;
+}
+
+.drag-bar .title {
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  opacity: 0.9;
+}
+
+.drag-bar button {
+  background: transparent;
+  color: #aaa;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.drag-bar button:hover {
+  color: #fff;
+}
+
+/* ===============================
+   SAFE ZONE
+================================ */
+.safe-zone {
+  height: 8px;
+}
+
+/* ===============================
+   GLASS CONTAINER
+================================ */
+.glass {
+  background: rgba(30, 30, 30, 0.55);
+  backdrop-filter: blur(14px);
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+/* ===============================
+   MAIN CONTENT
+================================ */
+.overlay {
+  margin: 10px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* ===============================
+   QUESTION INPUT
+================================ */
+textarea {
+  width: 100%;
+  height: 90px;
+  resize: none;
+  background: rgba(10, 10, 10, 0.6);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 6px;
+  padding: 10px;
+  font-size: 13px;
+  outline: none;
+}
+
+textarea::placeholder {
+  color: #aaa;
+}
+
+textarea:focus {
+  border-color: #5aa9ff;
+}
+
+/* ===============================
+   ASK BUTTON
+================================ */
+#askBtn {
+  align-self: flex-start;
+  background: linear-gradient(135deg, #3a7afe, #5f9cff);
+  color: #fff;
+  border: none;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+#askBtn:hover {
+  opacity: 0.9;
+}
+
+/* ===============================
+   ANSWER BOX
+================================ */
+.answer-wrap {
+  background: rgba(10, 10, 10, 0.55);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 6px;
+  padding: 10px;
+  max-height: 180px;
+  overflow-y: auto;
+}
+
+pre {
+  margin: 0;
+  white-space: pre-wrap;
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+/* ===============================
+   SCROLLBAR
+================================ */
+.answer-wrap::-webkit-scrollbar {
+  width: 6px;
+}
+
+.answer-wrap::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.25);
+  border-radius: 3px;
+}
+.resize-corner {
+  position: fixed;
+  right: 4px;
+  bottom: 4px;
+  width: 16px;
+  height: 16px;
+  cursor: se-resize;
+  background: transparent;
+}
