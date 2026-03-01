@@ -1,0 +1,7 @@
+{
+  "name": "overlay-ai-root",
+  "private": true,
+  "scripts": {
+    "start": "cd backend && npm install && node server.js"
+  }
+}
